@@ -185,4 +185,4 @@ The dataset was sourced from the UCI Machine Learning Repository. It is related 
    2. The tails are longer in the test residuals which may require some examination.
 2. Residuals Vs. Predicted Values
    1. The residuals are spread randomly around zero.
-   2. The spread in the test set appears to increase at higher predicted values.
+   2. The spread in the test set appears to increase at higher predicted
