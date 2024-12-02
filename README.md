@@ -16,7 +16,17 @@ This Markdown document will serve as a comprehensive home base for the **Wine Qu
     - [Description](#description)
     - [Structure](#structure)
   - [4. Exploratory Data Analysis (EDA)](#4-exploratory-data-analysis-eda)
-    - [4.1 Understanding the data](#41-understanding-the-data)
+    - [4.1 Understanding the data - Feature Distributions](#41-understanding-the-data---feature-distributions)
+    - [4.2 Understanding the data - Feature Pair Plots](#42-understanding-the-data---feature-pair-plots)
+    - [4.3 Understanding the data - Correlation Matrix](#43-understanding-the-data---correlation-matrix)
+  - [5. Regression Analysis](#5-regression-analysis)
+    - [5.1 Full Feature Analysis](#51-full-feature-analysis)
+    - [5.2 Removing Features](#52-removing-features)
+      - [5.2.1 Features Removed Due To Highly Correlated Pairs (Threshold \> 0.65):](#521-features-removed-due-to-highly-correlated-pairs-threshold--065)
+        - [Red Wine](#red-wine)
+        - [White Wine](#white-wine)
+  - [6. Future Work](#6-future-work)
+    - [6.1 Final Model](#61-final-model)
 
 ---
 
@@ -150,39 +160,8 @@ The dataset was sourced from the UCI Machine Learning Repository. It is related 
    1. density
    2. residual sugar
 
-##### Results
+## 6. Future Work
 
-1. Red Wine - Model Performance:
-   1. Training RMSE: 0.22, Test_RMSE: 0.56
-   2. Training R^2: 0.93, Test R^2: 0.53
-2. White Wine - Model Performance:
-   1. Training RMSE: 0.23, Test_RMSE: 0.59
-   2. Training R^2: 0.93, Test R^2: 0.55
-3. Feature Importance Plot - Red Wine:
-   ![Red Wine High Correlation Reduction Feature Importance](Assets/FeatureImportance_reduced_red.png)
-4. Feature Importance Plot - White Wine:
-   ![White Wine High Correlation Reduction Feature Importance](Assets/FeatureImportance_reduced_white.png)
+### 6.1 Final Model
 
-##### Observations
-
-- After reducing and testing numerous feature sets, I have concluded that my best model performance has been with removing highly correlated pairs. The model performance dropped with each feature reduction after interrealated pair removals. I will evaluate and tune this model to try and improve performance.
-
-### 5.3 Error Analysis
-
-#### 5.3.1 Residual Distributions
-
-1. Red Wine:
-    ![Red Wine Residuals](Assets/ResidualDist_red.png)
-    ![Red Wine Residuals Vs. Predicted Values](Assets/ResidualsVPredict_red.png)
-2. White Wine:
-    ![White Wine Residuals](Assets/ResidualDist_white.png)
-    ![White Wine Residuals Vs. Predicted Values](Assets/ResidualsVPredict_white.png)
-
-#### 5.3.1 Observations
-
-1. Residuals
-   1. The distributions are centered around zero.
-   2. The tails are longer in the test residuals which may require some examination.
-2. Residuals Vs. Predicted Values
-   1. The residuals are spread randomly around zero.
-   2. The spread in the test set appears to increase at higher predicted
+I plan to improve this final model that was trained off the dataset with the two highest correlated features removed. Doing some model refinement would ideally improve the predictive results of this current model.
